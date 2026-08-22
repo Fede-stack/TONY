@@ -98,10 +98,13 @@ idf = IntrinsicDimensionFinder(backend="precomputed")
 res = idf.fit(embedding_matrix)
 ```
 
-### Notes
+### References
 
-- ID is a property of the *set*, not of a single document; estimates are unstable with only a few dozen points, and cost grows quickly with `N` (full distance matrix via `dadapy`).
-- Lower `Dthr` selects smaller neighbourhoods, i.e. more local scales.
-- `initial_id` is passed to `ABIDE.__init__` but never read by `return_ids_kstar_binomial`, so estimation always starts from 2NN.
-
-Requires `numpy`, `requests`, `dadapy`, `scipy`; `sentence-transformers` only for the local backend.
+```bibtex
+@article{di2024scale,
+  title={Scale-adaptive and robust intrinsic dimension estimation via optimal neighbourhood identification},
+  author={Di Noia, Antonio and Macocco, Iuri and Glielmo, Aldo and Laio, Alessandro and Mira, Antonietta},
+  journal={arXiv preprint arXiv:2405.15132},
+  year={2024}
+}
+```
