@@ -25,6 +25,9 @@ main:
 
   - title: "Additional Markers"
     url: /advMarkers/
+    
+  - title: "Sparse Interpretable Features"
+    url: /sae_tony/
         
   # - title: "Blog Posts"
   #   url: /year-archive/
