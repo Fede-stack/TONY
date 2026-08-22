@@ -20,7 +20,7 @@ from TONY.AdvancedMarkers import PerplexityExtractor, IntrinsicDimensionFinder
 
 ## `PerplexityExtractor`
 
-Perplexity of a text under a causal language model — the exponential of the mean per-token cross-entropy. Low values mean the model finds the text predictable, high values atypical.
+Perplexity of a text under a causal language model, the exponential of the mean per-token cross-entropy. Low values mean the model finds the text predictable, high values atypical. This makes it usable as a discriminative marker in contexts of language disorganisation, where derailment, loose associations or reduced coherence make the text less predictable to the model and push perplexity upwards.
 
 ```python
 PerplexityExtractor(model_name, device=None, backend="auto")
@@ -53,7 +53,7 @@ Requires `torch` + `transformers` (HF) or `mlx-lm` (MLX); imports are lazy, so o
 
 ## `IntrinsicDimensionFinder`
 
-Intrinsic dimension (ID) of a set of representations — the effective number of degrees of freedom of the manifold they lie on, estimated with ABIDE (binomial estimator + kstar scale selection). Encoding is handled by the class.
+Intrinsic dimension (ID) of a set of representations, the effective number of degrees of freedom of the manifold they lie on, estimated with ABIDE (binomial estimator + kstar scale selection). Encoding is handled by the class. ID has been used as a discriminative marker to separate patients with psychosis from healthy controls on the basis of free-generated text: the embeddings of the two groups lie on manifolds of measurably different dimensionality, so the estimate can be computed per group (or per participant) and compared directly.
 
 ```python
 IntrinsicDimensionFinder(
@@ -106,5 +106,17 @@ res = idf.fit(embedding_matrix)
   author={Di Noia, Antonio and Macocco, Iuri and Glielmo, Aldo and Laio, Alessandro and Mira, Antonietta},
   journal={arXiv preprint arXiv:2405.15132},
   year={2024}
+}
+```
+```bibtex
+@article{palominos2025lexical,
+  title={Lexical meaning is lower dimensional in psychosis},
+  author={Palominos, Claudio and Stein, Frederike and Kircher, Tilo and Ayesa-Arriola, Rosa and Palaniyappan, Lena and Homan, Philipp and Sommer, Iris E and Hinzen, Wolfram},
+  journal={Scientific Reports},
+  volume={16},
+  number={1},
+  pages={859},
+  year={2025},
+  publisher={Nature Publishing Group UK London}
 }
 ```
