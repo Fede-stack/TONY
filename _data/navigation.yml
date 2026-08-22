@@ -14,16 +14,16 @@ main:
   # - title: "Talks"
   #   url: /talks/    
 
-  - title: "Lexicon-Level Features"
+  - title: "Lexicon Features"
     url: /Lexicon/    
     
-  - title: "Transformers-based Features"
+  - title: "Transformers Features"
     url: /Transformers/
     
-  - title: "Filling BDI-II"
+  - title: "BDI-II"
     url: /bdi/
 
-  - title: "Sparse Interpretable Features"
+  - title: "SAE Features"
   url: /sae_tony/
 
   - title: "Additional Markers"
