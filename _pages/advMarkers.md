@@ -1,3 +1,13 @@
+---
+permalink: /advMarkers/
+title: "Advanced Markers"
+author_profile: true
+redirect_from:
+  - /advmarkers.html
+---
+
+{% include toc %}
+
 # TONY.AdvancedMarkers
 
 Markers derived from the statistical and geometric properties of neural representations. So far two different markers have been implemented for this module. More are expected to be implemented in the future!
